@@ -9,5 +9,6 @@ typedef struct s_dlist {
 
 t_dlist	*create_dlist_node(void *data);
 void	print_dlist(t_dlist *dlist);
+void	free_dlist(t_dlist *dlist);
 
 #endif
