@@ -11,10 +11,14 @@
             "id": "3344fac8c8c8d75a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "challenges/chapter-01/question-02.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "question-02"
             }
           }
         ]
@@ -182,5 +186,10 @@
     }
   },
   "active": "3344fac8c8c8d75a",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "challenges/chapter-01/question-01.md",
+    "challenges/chapter-01/question-02.md",
+    "challenges/chapter-01",
+    "challenges"
+  ]
 }
