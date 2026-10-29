@@ -13,5 +13,6 @@ void	free_dlist(t_dlist *dlist);
 int		insert_dlist_front(t_dlist *dlist, t_dlist *front);
 int		insert_dlist_back(t_dlist *dlist, t_dlist *back);
 int		delete_dlist_node(t_dlist *del);
+t_dlist	*find_dlist_node(t_dlist *dlist, char *data);
 
 #endif
