@@ -6,20 +6,27 @@
 
 int	main(void)
 {
-	t_dlist	*head;
+	t_dlist	*cur; // cursor
 
-	head = create_dlist_node(strdup("deneme"));
-	// if (!head)
-	// 	return (printf("Error: create_dlist_node\n"), 1);
+	cur = create_dlist_node(strdup("deneme"));
+	if (!cur)
+		return (printf("Error: create_dlist_node\n"), 1);
 	
-	insert_dlist_front(head, create_dlist_node(strdup("Hey!")));
-	insert_dlist_front(head, create_dlist_node(strdup("Hello World!")));
-	insert_dlist_back(head, create_dlist_node(strdup("This should be back")));
-
-
-
+	if (insert_dlist_front(cur, create_dlist_node(strdup("Hey!"))))
+		return (free_dlist(cur), 1);
+	if (insert_dlist_front(cur, create_dlist_node(strdup("Hello World!"))))
+		return (free_dlist(cur), 1);
+	if (insert_dlist_back(cur, create_dlist_node(strdup("This should be back"))))
+		return (free_dlist(cur), 1);
 	
-	print_dlist(head);	
-	free_dlist(head);
+	print_dlist(cur);
+
+	printf("\nLet's delete 'Hey!' node\n\n");
+	if (delete_dlist_node(cur->next))
+		return (free_dlist(cur), 1);
+
+	print_dlist(cur);
+
+	free_dlist(cur);
 	return (0);
 }
