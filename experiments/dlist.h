@@ -10,5 +10,7 @@ typedef struct s_dlist {
 t_dlist	*create_dlist_node(void *data);
 void	print_dlist(t_dlist *dlist);
 void	free_dlist(t_dlist *dlist);
+int		insert_dlist_front(t_dlist *dlist, t_dlist *front);
+int		insert_dlist_back(t_dlist *dlist, t_dlist *back);
 
 #endif

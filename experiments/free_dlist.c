@@ -11,16 +11,17 @@ void	free_dlist(t_dlist *dlist)
 	backward = dlist->prev;
 	while (forward)
 	{
-		dlist = dlist->next;
-		free(forward->data);
-		free(forward);
-		forward = dlist;
+		forward = forward->next;
+		free(dlist->data);
+		free(dlist);
+		dlist = forward;
 	}
+	dlist = backward;
 	while (backward)
 	{
-		dlist = dlist->prev;
-		free(backward->data);
-		free(backward);
-		backward = dlist->prev;
+		backward = backward->prev;
+		free(dlist->data);
+		free(dlist);
+		dlist = backward;
 	}
 }
